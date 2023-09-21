@@ -20,10 +20,15 @@ body {
 .logoIcon{
   margin: 20px;
   color:#6e8894;
+  position: fixed;
+  top: 20px;
+  left: 95%;
+  transition: transform 1s;
 }
 
 .logoIcon:hover{
   cursor: pointer;
+  transform: scale(1.5);
 }
 /* these apply to all pages ^ */
 

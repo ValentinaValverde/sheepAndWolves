@@ -58,3 +58,13 @@ const meetInk = document.getElementById('meetInk');
 meetInk.addEventListener('click', () => {
     Ink.listInfo();
 })
+
+//list of Clarifications:
+
+//Wolves:
+//health damage is -50 (instant kill)
+//esteem damage is -10
+
+//Sheep:
+//health damage is -10
+//esteem damage is -20

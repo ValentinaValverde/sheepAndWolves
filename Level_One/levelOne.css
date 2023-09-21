@@ -1,15 +1,135 @@
+/* these apply to all pages: */
 html {
-    font-size: 16px;
-    box-sizing: border-box;
+  font-size: 20px;
+  box-sizing: border-box;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #000500;
+  font-family: 'Gloock', serif;
+  color: #6e8894;
+  text-align: center;
+}
+
+.logoIcon {
+  margin: 20px;
+  color: #6e8894;
+  position: fixed;
+  top: 20px;
+  left: 95%;
+  transition: transform 1s;
+}
+
+.logoIcon:hover {
+  cursor: pointer;
+  transform: scale(1.5);
+}
+
+/* these apply to all pages ^ */
+
+
+.startButt {
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 5px;
+  font-family: 'Gloock', serif;
+  font-size: 1.1rem;
+  background-color: #c44900;
+  color:#efd6ac;
+  animation: fadeIn 3s;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+/* makes it so that the start button fades in */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
   }
-  
-  *{
-    box-sizing: inherit;
+
+  100% {
+    opacity: 1;
   }
-  
-  body {
-    background-color: #000500;
-    font-family: 'Gloock', serif;
-    color: #6e8894;
-    text-align: center;
-  }
+}
+
+.button{
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 5px;
+  font-family: 'Gloock', serif;
+  font-size: 1.1rem;
+  background-color: #6e8894;
+  color: #efd6ac;
+}
+
+.hidden{
+  display: none;
+}
+
+.hidden01{
+  display: none;
+}
+
+p{
+  color:#efd6ac;
+}
+
+.subtitle{
+  color:#6e8894;
+}
+
+#pTen{
+  color:#c44900;
+}
+
+#pFourteen{
+  color:#c44900;
+}
+
+#wantedFriend{
+  color:#c44900;
+}
+
+#nextLevel{
+  text-decoration: none;
+  margin-top: 50px;
+}
+
+#nextLevel02{
+  text-decoration: none;
+  margin-top: 50px;
+}
+
+#nextLevel03{
+  text-decoration: none;
+  margin-top: 50px;
+}
+
+.emptySpace{
+  margin: 500px;
+}
+
+.footer {
+  width: 100%;
+  background-color: #efd6ac;
+  text-align: right;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+
+}
+
+#myName {
+  color: #c44900;
+  padding-right: 50px;
+}
