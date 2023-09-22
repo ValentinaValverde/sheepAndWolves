@@ -56,7 +56,7 @@ class Sheep extends Character {
     }
 
     taunt(otherCharacter) {
-        return `"Look who it is!" said ${this.name}. "It's ${otherCharacter.name}! Oh boy, I'm so scared right now, are you going to eat me? HAHAHA!! I'd like to see you try."`
+        return `"Look who it is!" said ${this.name}. "It's ${otherCharacter.name}! Have you come here to eat me? Why, you are absolutely hideous. No wonder you don't have any friends."`
     }
 }
 

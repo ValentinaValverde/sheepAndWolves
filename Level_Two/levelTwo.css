@@ -78,7 +78,11 @@ button:hover {
 /* applies to every button ^ */
 
 
-
+#userInput{
+  width: 40%;
+  padding: 5px;
+  
+}
 
 
 
