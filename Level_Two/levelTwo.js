@@ -41,8 +41,10 @@ class Wolf extends Character {
         return `Hi there, are you okay?`
     }
 
-    help(otherCharacter){ //edit this hehehe
-        return (otherCharacter.health + 1);
+    help(otherCharacter){
+        alert(`Ink helped ${otherCharacter.name}. ${otherCharacter.name} now has ${otherCharacter.health + 1} health.`)
+        otherCharacter.health = (otherCharacter.health + 1)
+        return (otherCharacter.health);
     }
 
     healthRestored(){
@@ -116,10 +118,19 @@ const startButt = document.getElementById('startButt');
 const nextOne = document.getElementById('nextOne');
 const nextTwo = document.getElementById('nextTwo');
 const nextThree = document.getElementById('nextThree');
-const nextFour = document.getElementById('nextFour');
 
 const helpOne = document.getElementById('helpOne');
 const nothingOne = document.getElementById('nothingOne');
+
+const helpTwo = document.getElementById('helpTwo');
+const nextFour = document.getElementById('nextFour');
+const nextFive = document.getElementById('nextFive');
+
+const helpThree = document.getElementById('helpThree');
+const attackOne = document.getElementById('attackOne');
+
+const nextSix = document.getElementById('nextSix');
+
 
 
 
@@ -139,6 +150,23 @@ const userSpeak = document.getElementById('userSpeak');
 const pEight = document.getElementById('pEight');
 const pNine = document.getElementById('pNine');
 const pTen = document.getElementById('pTen');
+
+const pA = document.getElementById('pA');
+const pB = document.getElementById('pB');
+const pC = document.getElementById('pC');
+const pD = document.getElementById('pD');
+const pE = document.getElementById('pE');
+const pF = document.getElementById('pF');
+const pG = document.getElementById('pG');
+const pH = document.getElementById('pH');
+const pI = document.getElementById('pI');
+const pJ = document.getElementById('pJ');
+const pK = document.getElementById('pK');
+const pL = document.getElementById('pL');
+const pM = document.getElementById('pM');
+const pN = document.getElementById('pN');
+const pO = document.getElementById('pO');
+
 
 
 
@@ -173,9 +201,12 @@ nextTwo.addEventListener('click', () => {
 
     setTimeout(() => {
         pSeven.innerHTML = "Its eyes are completely black. There's something unnatural about it."
+    }, 6000);
+
+    setTimeout(() => {
         showButton01(userInput, 'hidden');
         showButton(nextThree, 'hidden');
-    }, 6000);
+    }, 10000);
 })
 
 
@@ -198,4 +229,73 @@ nextThree.addEventListener('click', () => {
 
 //After this, we start branching into different options and pathways. Mess starts here.
 
+helpOne.addEventListener('click', () => {
+    pA.innerHTML = Apricot.listHealth();
 
+    setTimeout(() => {
+        Ink.help(Apricot);
+        pB.innerHTML = Apricot.listHealth();
+        pC.innerHTML = "Apricot's eyes start to turn a dark shade of red. They almost looks like blood."
+        showButton(helpTwo, 'hidden');
+    }, 3000);
+})
+
+helpTwo.addEventListener('click', () => {
+    pD.innerHTML = Apricot.listHealth();
+
+    setTimeout(() => {
+        Ink.help(Apricot);
+        pE.innerHTML = Apricot.listHealth();
+        pF.innerHTML = "The lamb starts to shake violently."
+    }, 3000);
+
+    setTimeout(() => {
+        pG.innerHTML = Ink.listHealth();
+    }, 8000);
+
+    setTimeout(() => {
+        Apricot.attack(Ink);
+        pH.innerHTML = Ink.listHealth();
+        pI.innerHTML = "Apricot seems to be a little stronger than Sugar was."
+        showButton(nextFour, 'hidden');
+    }, 12000);
+})
+
+nextFour.addEventListener('click', () => {
+    pJ.innerHTML = "Ink, confused and hurt, says, “Why are you attacking me? I am trying to help you.”"
+    showButton(nextFive, 'hidden');
+})
+
+nextFive.addEventListener('click', () => {
+    pK.innerHTML = Ink.listHealth();
+
+    setTimeout(() => {
+        Apricot.attack(Ink);
+        pL.innerHTML = Ink.listHealth();
+        showButton(attackOne, 'hidden');
+        showButton(helpThree, 'hidden');
+    }, 2000);
+})
+
+attackOne.addEventListener('click', () => {
+    pM.innerHTML = "Ink doesn't like being attacked by what are supposed to be docile animals. So she gives in to her primal instinct."
+    pN.innerHTML = Apricot.listHealth();
+
+    setTimeout(() => {
+        Ink.attack(Apricot);
+        pO.innerHTML = Apricot.listHealth();
+        showButton(nextSix, 'hidden');
+    }, 3000);
+})
+
+nextSix.addEventListener('click', () => {
+    console.log("Ink watches sadly as the lamb slowly dies. As the light in it's eyes is fading, Apricot mutters a single word.")
+
+    setTimeout(() => {
+        console.log("Sugar.");
+    }, 5000);
+
+    setTimeout(() => {
+        showButton(nextLevel, 'hidden');
+    }, 8000);
+})
