@@ -32,6 +32,50 @@ body {
 }
 /* these apply to all pages ^ */
 
+.startButt {
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 5px;
+  font-family: 'Gloock', serif;
+  font-size: 1.1rem;
+  background-color: #c44900;
+  color:#efd6ac;
+  animation: fadeIn 3s;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+/* makes it so that the start button fades in */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+/* applies to every button: */
+.button{
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 5px;
+  font-family: 'Gloock', serif;
+  font-size: 1.1rem;
+  background-color: #6e8894;
+  color: #efd6ac;
+}
+
+.hidden{
+  display: none;
+}
+/* applies to every button ^ */
 
 
 
@@ -40,6 +84,10 @@ body {
 
 
 
+
+.emptySpace{
+  margin: 500px;
+}
 
 .footer{
   width: 100%;

@@ -103,6 +103,11 @@ button:hover {
 
 
 
+.space{
+  margin: 75px;
+}
+
+
 .footer{
   width: 100%;
   background-color: #efd6ac;

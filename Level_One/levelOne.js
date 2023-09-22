@@ -224,7 +224,7 @@ physAttackOne.addEventListener('click', () => {
 })
 
 nextSix.addEventListener('click', () => {
-    fallenFoe.innerHTML = "Ink stood over her fallen foe, both sad and upset and still lonely, and said.."
+    fallenFoe.innerHTML = "Ink stood over her fallen foe, frustrated and angry and still lonely, and said.."
     setTimeout(() => {
         wantedFriend.innerHTML = "All I wanted was a friend."
     }, 3000);
