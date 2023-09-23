@@ -70,6 +70,7 @@ button:hover {
   font-size: 1.1rem;
   background-color: #6e8894;
   color: #efd6ac;
+  text-decoration: none;
 }
 
 .hidden{
@@ -81,12 +82,21 @@ button:hover {
 #userInput{
   width: 40%;
   padding: 5px;
-  
+
 }
 
 
+#pQ{
+  color:#c44900;
+}
 
+#para6{
+  color:#c44900;
+}
 
+#p8{
+  color:#c44900;
+}
 
 
 .emptySpace{

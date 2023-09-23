@@ -20,10 +20,10 @@ class Character {
     attack(otherCharacter) {
         otherCharacter.health = (otherCharacter.health - this.healthDamage);
 
-        setTimeout(() => {
+
             alert(`${this.name} attacked ${otherCharacter.name}! Now ${otherCharacter.name} only has ${otherCharacter.health} health.`)
             return otherCharacter.health;
-        }, 3000);
+
     }
 
     listHealth() {
@@ -130,7 +130,26 @@ const helpThree = document.getElementById('helpThree');
 const attackOne = document.getElementById('attackOne');
 
 const nextSix = document.getElementById('nextSix');
+const nextLevelOne = document.getElementById('nextLevelOne');
 
+const tryAgain = document.getElementById('tryAgain');
+
+const nextSeven = document.getElementById('nextSeven');
+const nextLevelTwo = document.getElementById('nextLevelTwo');
+
+const helpSix = document.getElementById('helpSix')
+
+const help01 = document.getElementById('help01');
+const help02 = document.getElementById('help02');
+
+const attack01 = document.getElementById('attack01');
+const attack02 = document.getElementById('attack02');
+
+const next01 = document.getElementById('next01');
+const next02 = document.getElementById('next02');
+
+const nextLevel01 = document.getElementById('nextLevel01');
+const nextLevel02 = document.getElementById('nextLevel02');
 
 
 
@@ -166,6 +185,30 @@ const pL = document.getElementById('pL');
 const pM = document.getElementById('pM');
 const pN = document.getElementById('pN');
 const pO = document.getElementById('pO');
+const pP = document.getElementById('pP');
+const pQ = document.getElementById('pQ');
+
+const para1 = document.getElementById('para1');
+const para2 = document.getElementById('para2');
+const para3 = document.getElementById('para3');
+const para4 = document.getElementById('para4');
+const para5 = document.getElementById('para5');
+const para6 = document.getElementById('para6');
+
+const p1 = document.getElementById('p1')
+const p2 = document.getElementById('p2')
+const p3 = document.getElementById('p3')
+const p4 = document.getElementById('p4')
+const p5 = document.getElementById('p5')
+const p6 = document.getElementById('p6')
+const p7 = document.getElementById('p7')
+const p8 = document.getElementById('p8')
+const p9 = document.getElementById('p9')
+const p10 = document.getElementById('p10')
+const p11 = document.getElementById('p11')
+
+
+
 
 
 
@@ -228,7 +271,98 @@ nextThree.addEventListener('click', () => {
 })
 
 //After this, we start branching into different options and pathways. Mess starts here.
+//user selects nothingOne after nextThree
+nothingOne.addEventListener('click', () => {
+    p1.innerHTML = "Apricot comes a little closer and-"
+    p2.innerHTML = Ink.listHealth();
 
+    setTimeout(() => {
+        Apricot.attack(Ink);
+        p3.innerHTML = Ink.listHealth();
+        showButton(help01, 'hidden'); //continue this as well :)
+        showButton(attack01, 'hidden');
+    }, 3000);
+})
+
+//user chooses help01 after nothingOne
+help01.addEventListener('click', () => {
+    p4.innerHTML = Apricot.listHealth();
+
+    setTimeout(() => {
+        Ink.help(Apricot);
+        p5.innerHTML = Apricot.listHealth();
+        p6.innerHTML = "Apricot's eyes start to turn a dark shade of red. They almost looks like blood."
+        showButton(help02, 'hidden');
+        showButton(attack02, 'hidden');
+    }, 3000);
+})
+
+//attack02 is selected after help01
+attack02.addEventListener('click', () => {
+    p7.innerHTML = "Ink doesn't like being attacked by what are supposed to be docile animals. So she gives in to her primal instinct."
+    p8.innerHTML = Apricot.listHealth();
+
+    setTimeout(() => {
+        Ink.attack(Apricot);
+        p9.innerHTML = Apricot.listHealth();
+        showButton(next02, 'hidden');
+    }, 3000);
+})
+
+next02.addEventListener('click', () => {
+    p10.innerHTML = "Ink watches sadly as the lamb slowly dies. As the light in it's eyes is fading, Apricot mutters a single word."
+
+    setTimeout(() => {
+        p11.innerHTML = "Sugar.";
+    }, 5000);
+
+    setTimeout(() => {
+        showButton(nextLevel02, 'hidden');
+    }, 8000);
+})
+
+
+
+
+
+
+//user chooses attack01 after nothingOne
+attack01.addEventListener('click', () => {
+    p4.innerHTML = "Ink doesn't like being attacked by what are supposed to be docile animals. So she gives in to her primal instinct."
+    p5.innerHTML = Apricot.listHealth();
+
+    setTimeout(() => {
+        Ink.attack(Apricot);
+        p6.innerHTML = Apricot.listHealth();
+        showButton(next01, 'hidden');
+    }, 3000);
+})
+
+next01.addEventListener('click', () => {
+    p7.innerHTML = "Ink watches sadly as the lamb slowly dies. As the light in it's eyes is fading, Apricot mutters a single word."
+
+    setTimeout(() => {
+        p8.innerHTML = "Sugar.";
+    }, 5000);
+
+    setTimeout(() => {
+        showButton(nextLevel01, 'hidden');
+    }, 8000);
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+//user selects help01 after nextThree
 helpOne.addEventListener('click', () => {
     pA.innerHTML = Apricot.listHealth();
 
@@ -277,6 +411,79 @@ nextFive.addEventListener('click', () => {
     }, 2000);
 })
 
+//user selected "help" after nextFive button
+helpThree.addEventListener('click', () => {
+    pM.innerHTML = Apricot.listHealth();
+
+    setTimeout(() => {
+        Ink.help(Apricot);
+        pN.innerHTML = Apricot.listHealth();
+    }, 3000);
+
+    setTimeout(() => {
+        pO.innerHTML = "Apricot doesn't look like she wants to attack Ink, but she does so anyway."
+    }, 5000);
+
+    setTimeout(() => {
+        pP.innerHTML = Ink.listHealth();
+        setTimeout(() => {
+            Apricot.attack(Ink);
+            pQ.innerHTML = Ink.listHealth();
+        }, 3000);
+    }, 8000);
+
+    setTimeout(() => {
+        showButton(helpFour, 'hidden');
+        showButton(attackTwo, 'hidden');
+    }, 12000);
+})
+
+//user selects attackTwo after helpThree (damnnnnn)
+attackTwo.addEventListener('click', () => {
+    para1.innerHTML = "Ink doesn't like being attacked by what are supposed to be docile animals. So she gives in to her primal instinct."
+    para2.innerHTML = Apricot.listHealth();
+
+    setTimeout(() => {
+        Ink.attack(Apricot);
+        para3.innerHTML = Apricot.listHealth();
+        showButton(nextSeven, 'hidden');
+    }, 3000);
+})
+
+nextSeven.addEventListener('click', () => {
+    para5.innerHTML = "Ink watches sadly as the lamb slowly dies. As the light in it's eyes is fading, Apricot mutters a single word."
+
+    setTimeout(() => {
+        para6.innerHTML = "Sugar.";
+    }, 5000);
+
+    setTimeout(() => {
+        showButton(nextLevelTwo, 'hidden');
+    }, 8000);
+})
+
+
+//user selected helpFour after helpThree
+helpFour.addEventListener('click', () => {
+    para1.innerHTML = "The only thing Ink wanted was to help."
+    para2.innerHTML = Ink.listHealth();
+
+    setTimeout(() => {
+        Apricot.attack(Ink);
+        para3.innerHTML = Ink.listHealth();
+    }, 3000);
+
+    setTimeout(() => {
+        para4.innerHTML = "But alas, the wolf was too forgiving."
+        showButton(tryAgain, 'hidden');
+    }, 6000);
+})
+
+tryAgain.addEventListener('click', () => {
+    window.location.reload();
+})
+
+//user selected "attack" after nextFive button
 attackOne.addEventListener('click', () => {
     pM.innerHTML = "Ink doesn't like being attacked by what are supposed to be docile animals. So she gives in to her primal instinct."
     pN.innerHTML = Apricot.listHealth();
@@ -289,13 +496,14 @@ attackOne.addEventListener('click', () => {
 })
 
 nextSix.addEventListener('click', () => {
-    console.log("Ink watches sadly as the lamb slowly dies. As the light in it's eyes is fading, Apricot mutters a single word.")
+    pP.innerHTML = "Ink watches sadly as the lamb slowly dies. As the light in it's eyes is fading, Apricot mutters a single word."
 
     setTimeout(() => {
-        console.log("Sugar.");
+        pQ.innerHTML = "Sugar.";
     }, 5000);
 
     setTimeout(() => {
-        showButton(nextLevel, 'hidden');
+        showButton(nextLevelOne, 'hidden');
     }, 8000);
 })
+
