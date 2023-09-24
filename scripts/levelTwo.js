@@ -162,22 +162,89 @@ function afterAttack (newDiv, nextLevel) {
 
 
 
-
-
-
-
-//grabbing buttons:
+//grabbing HTML elements
 const meetApricot = document.getElementById('meetApricot');
 const startButt = document.getElementById('startButt');
+
+//next
 const nextOne = document.getElementById('nextOne');
 const nextTwo = document.getElementById('nextTwo');
 const nextThree = document.getElementById('nextThree');
+const nextFour = document.getElementById('nextFour')
 
+const next1 = document.getElementById('next1');
+const next2 = document.getElementById('next2');
+const next3 = document.getElementById('next3');
+
+
+//help
 const helpOne = document.getElementById('helpOne');
+const helpThree = document.getElementById('helpThree')
+const helpFour = document.getElementById('helpFour')
+
+const help1 = document.getElementById('help1');
+const help2 = document.getElementById('help2');
+
+
+
+//nothing
 const nothingOne = document.getElementById('nothingOne');
+const nothing1 = document.getElementById('nothing1');
+const nothing2 = document.getElementById('nothing2');
 
 
-//grabbing HTML elements
+//attack
+const attackOne = document.getElementById('attackOne')
+const attackDivOne = document.getElementById('attackDivOne')
+const nextAfterAttackOne = document.getElementById('nextAfterAttackOne')
+const afterAttackOne = document.getElementById('afterAttackOne')
+
+const attackTwo = document.getElementById('attackTwo')
+const attackDivTwo = document.getElementById('attackDivTwo')
+const nextAfterAttackTwo = document.getElementById('nextAfterAttackTwo')
+const afterAttackTwo = document.getElementById('afterAttackTwo')
+
+const attack1 = document.getElementById('attack1')
+const attackDiv1 = document.getElementById('attackDiv1')
+const nextAfterAttack1 = document.getElementById('nextAfterAttack1')
+const afterAttack1 = document.getElementById('afterAttack1')
+
+const attack2 = document.getElementById('attack2')
+const attackDiv2 = document.getElementById('attackDiv2')
+const nextAfterAttack2 = document.getElementById('nextAfterAttack2')
+const afterAttack2 = document.getElementById('afterAttack2')
+
+const attack3 = document.getElementById('attack3')
+const attackDiv3 = document.getElementById('attackDiv3')
+const nextAfterAttack3 = document.getElementById('nextAfterAttack3')
+const afterAttack3 = document.getElementById('afterAttack3')
+
+
+//next level
+const nextLevel01 = document.getElementById('nextLevel01');
+const nextLevel02 = document.getElementById('nextLevel02');
+const nextLevel03 = document.getElementById('nextLevel03');
+const nextLevel04 = document.getElementById('nextLevel04');
+const nextLevel05 = document.getElementById('nextLevel05');
+const nextLevel06 = document.getElementById('nextLevel06');
+const nextLevel07 = document.getElementById('nextLevel07');
+
+
+//speak
+const userInput = document.getElementById('userInput');
+const userInputTwo = document.getElementById('userInputTwo');
+
+const userSpeak = document.getElementById('userSpeak');
+const userSpeak2 = document.getElementById('userSpeak2');
+
+//the other one of these was just named "next" or something
+const speak2 = document.getElementById('speak2');
+
+
+//try again
+const tryAgain = document.getElementById('tryAgain');
+
+//p
 const pOne = document.getElementById('pOne');
 const pTwo = document.getElementById('pTwo');
 const pThree = document.getElementById('pThree');
@@ -185,13 +252,65 @@ const pFour = document.getElementById('pFour');
 const pFive = document.getElementById('pFive');
 const pSix = document.getElementById('pSix');
 const pSeven = document.getElementById('pSeven');
-
-const userInput = document.getElementById('userInput');
-const userSpeak = document.getElementById('userSpeak');
-
 const pEight = document.getElementById('pEight');
 const pNine = document.getElementById('pNine');
 const pTen = document.getElementById('pTen');
+
+//line word num
+const lineOne = document.getElementById('lineOne');
+const lineTwo = document.getElementById('lineTwo');
+const lineThree = document.getElementById('lineThree');
+const lineFour = document.getElementById('lineFour');
+const lineFive = document.getElementById('lineFive');
+const lineSix = document.getElementById('lineSix');
+const lineSeven = document.getElementById('lineSeven');
+const lineEight = document.getElementById('lineEight');
+const lineNine = document.getElementById('lineNine');
+const lineTen = document.getElementById('lineTen');
+const lineEleven = document.getElementById('lineEleven');
+const lineElevenHalf = document.getElementById('lineElevenHalf');
+const lineTwelve = document.getElementById('lineTwelve');
+const lineThirteen = document.getElementById('lineThirteen');
+const lineFourteen = document.getElementById('lineFourteen');
+const lineFifteen = document.getElementById('lineFifteen');
+const lineSixteen = document.getElementById('lineSixteen');
+const lineSeventeen = document.getElementById('lineSeventeen');
+const lineEighteen = document.getElementById('lineEighteen');
+const lineNineteen = document.getElementById('lineNineteen');
+
+//line num
+const line1 = document.getElementById('line1');
+const line2 = document.getElementById('line2');
+const line3 = document.getElementById('line3');
+const line4 = document.getElementById('line4');
+const line5 = document.getElementById('line5');
+const line6 = document.getElementById('line6');
+const line7 = document.getElementById('line7');
+const line8 = document.getElementById('line8');
+const line9 = document.getElementById('line9');
+const line10 = document.getElementById('line10');
+const line11 = document.getElementById('line11');
+const line12 = document.getElementById('line12');
+const line13 = document.getElementById('line13');
+const line14 = document.getElementById('line14');
+const line15 = document.getElementById('line15');
+const line16 = document.getElementById('line16');
+const line17 = document.getElementById('line17');
+const line18 = document.getElementById('line18');
+const line19 = document.getElementById('line19');
+const line20 = document.getElementById('line20');
+const line21 = document.getElementById('line21');
+const line22 = document.getElementById('line22');
+const line23 = document.getElementById('line23');
+const line24 = document.getElementById('line24');
+const line25 = document.getElementById('line25');
+const line26 = document.getElementById('line26');
+
+
+
+
+
+
 
 
 //button events
@@ -253,5 +372,5 @@ nextThree.addEventListener('click', () => {
 
 //After this, we start branching into different options and pathways. Mess starts here.
 helpOne.addEventListener('click', () => {
-    
+
 })
