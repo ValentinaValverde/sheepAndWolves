@@ -20,10 +20,8 @@ class Character {
     attack(otherCharacter) {
         otherCharacter.health = (otherCharacter.health - this.healthDamage);
 
-
-            alert(`${this.name} attacked ${otherCharacter.name}! Now ${otherCharacter.name} only has ${otherCharacter.health} health.`)
-            return otherCharacter.health;
-
+        alert(`${this.name} attacked ${otherCharacter.name}! Now ${otherCharacter.name} only has ${otherCharacter.health} health.`)
+        return otherCharacter.health;
     }
 
     listHealth() {

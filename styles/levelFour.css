@@ -1,0 +1,84 @@
+/* these apply to all pages: */
+html {
+    font-size: 20px;
+    box-sizing: border-box;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  
+  * {
+    box-sizing: inherit;
+  }
+  
+  body {
+    background-color: #000500;
+    font-family: 'Gloock', serif;
+    color: #6e8894;
+    text-align: center;
+  }
+  
+  .logoIcon{
+    margin: 20px;
+    color:#6e8894;
+    position: fixed;
+    top: 20px;
+    left: 95%;
+    transition: transform 1s;
+  }
+  
+  .logoIcon:hover{
+    cursor: pointer;
+    transform: scale(1.5);
+  }
+  /* these apply to all pages ^ */
+  
+  .startButt {
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px;
+    font-family: 'Gloock', serif;
+    font-size: 1.1rem;
+    background-color: #c44900;
+    color:#efd6ac;
+    animation: fadeIn 3s;
+  }
+  
+  button:hover {
+    cursor: pointer;
+  }
+  
+  /* makes it so that the start button fades in */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  
+  /* applies to every button: */
+  .button{
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px;
+    font-family: 'Gloock', serif;
+    font-size: 1.1rem;
+    background-color: #6e8894;
+    color: #efd6ac;
+    text-decoration: none;
+  }
+  
+  .hidden{
+    display: none;
+  }
+  /* applies to every button ^ */
+
+
+  .emptySpace{
+    margin: 500px;
+  }

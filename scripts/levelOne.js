@@ -85,8 +85,6 @@ const Sugar = new Sheep('Sugar');
 const Ink = new Wolf('Ink');
 
 
-
-
 //grabbing my button:
 const startButt = document.getElementById('startButt');
 const nextOne = document.getElementById('nextOne');
@@ -206,10 +204,6 @@ nextTwo.addEventListener('click', () => {
 // })
 
 
-
-
-
-
 //physical attack route:
 physAttackOne.addEventListener('click', () => {
     pOne.innerHTML = "Ink decides that she doesn't want to listen to Sugar say mean things anymore, and decides to physically attack him."
@@ -234,7 +228,6 @@ nextSix.addEventListener('click', () => {
     }, 6000);
 })
 //end physical attack route:
-
 
 
 //verbal attack route:
@@ -329,20 +322,3 @@ nextFive.addEventListener('click', () => {
     }, 6000);
 })
 //end entire verbal attack route
-
-
-
-
-
-//generic event listener:
-// button.addEventListener('click', () => {
-
-// })
-
-
-// generic timeout:
-// setTimeout(() => {
-    
-// }, timeout);
-
-
