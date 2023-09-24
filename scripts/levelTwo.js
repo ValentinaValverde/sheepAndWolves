@@ -92,6 +92,10 @@ class undeadLamb extends Sheep{
 const Ink = new Wolf('Ink');
 const Apricot = new undeadLamb('Apricot', 10, 15)
 
+
+//THESE FUNCTIONS ARE SACRED, DO NOT TOUCH!!!!
+//THESE FUNCTIONS ARE SACRED, DO NOT TOUCH!!!
+//THESE FUNCTIONS ARE SACRED, DO NOT TOUCH!! 
 //creating a function to show button
 function showButton(button, classHidden){
     button.classList.toggle(classHidden);
@@ -102,7 +106,57 @@ function showButton01(button, classHidden){
     button.classList.toggle(classHidden);
 }
 
+//instruction for use:
+//create a new div in html
+//grab it in js
+//pass it in as an argument
+//same goes for the next button.
 
+function attackRoute(newDiv, nextButton){
+    //creating new elements to put in the DOM
+    const para1 = document.createElement('p');
+    const para2 = document.createElement('p');
+    const para3 = document.createElement('p');
+
+    //putting something in the new elements:
+    para1.innerHTML = "Ink doesn't like being attacked by what are supposed to be docile animals. So she gives in to her primal instinct."
+    para2.innerHTML = Apricot.listHealth();
+
+    //appending the elements to a div so it shows up on the page
+    newDiv.append(para1);
+    newDiv.append(para2);
+
+    setTimeout(() => {
+        Ink.attack(Apricot); //shows alert
+        para3.innerHTML = Apricot.listHealth();
+        newDiv.append(para3); 
+        showButton(nextButton, 'hidden')
+        newDiv.append(nextButton);
+    }, 3000);
+}
+
+//this function is used after the nextButton (from attackRoute function) is clicked.
+function afterAttack (newDiv, nextLevel) {
+    const para4 = document.createElement('p');
+    const para5 = document.createElement('p');
+
+    para4.innerHTML = "Ink watches sadly as the lamb slowly dies. As the light in her eyes fades away, Apricot mutters a single word."
+    newDiv.append(para4);
+
+    setTimeout(() => {
+        para5.innerHTML = "Sugar."
+        para5.style.color = '#c44900';
+        newDiv.append(para5);
+    }, 4000);
+
+    setTimeout(() => {
+        showButton(nextLevel, 'hidden')
+        newDiv.append(nextLevel);
+    }, 6000);
+}
+//THESE FUNCTIONS ARE SACRED, DO NOT TOUCH!! ^
+//THESE FUNCTIONS ARE SACRED, DO NOT TOUCH!!! ^
+//THESE FUNCTIONS ARE SACRED, DO NOT TOUCH!!!! ^
 
 
 
@@ -122,37 +176,6 @@ const nextThree = document.getElementById('nextThree');
 const helpOne = document.getElementById('helpOne');
 const nothingOne = document.getElementById('nothingOne');
 
-const helpTwo = document.getElementById('helpTwo');
-const nextFour = document.getElementById('nextFour');
-const nextFive = document.getElementById('nextFive');
-
-const helpThree = document.getElementById('helpThree');
-const attackOne = document.getElementById('attackOne');
-
-const nextSix = document.getElementById('nextSix');
-const nextLevelOne = document.getElementById('nextLevelOne');
-
-const tryAgain = document.getElementById('tryAgain');
-
-const nextSeven = document.getElementById('nextSeven');
-const nextLevelTwo = document.getElementById('nextLevelTwo');
-
-const helpSix = document.getElementById('helpSix')
-
-const help01 = document.getElementById('help01');
-const help02 = document.getElementById('help02');
-
-const attack01 = document.getElementById('attack01');
-const attack02 = document.getElementById('attack02');
-
-const next01 = document.getElementById('next01');
-const next02 = document.getElementById('next02');
-
-const nextLevel01 = document.getElementById('nextLevel01');
-const nextLevel02 = document.getElementById('nextLevel02');
-
-
-
 
 //grabbing HTML elements
 const pOne = document.getElementById('pOne');
@@ -170,50 +193,8 @@ const pEight = document.getElementById('pEight');
 const pNine = document.getElementById('pNine');
 const pTen = document.getElementById('pTen');
 
-const pA = document.getElementById('pA');
-const pB = document.getElementById('pB');
-const pC = document.getElementById('pC');
-const pD = document.getElementById('pD');
-const pE = document.getElementById('pE');
-const pF = document.getElementById('pF');
-const pG = document.getElementById('pG');
-const pH = document.getElementById('pH');
-const pI = document.getElementById('pI');
-const pJ = document.getElementById('pJ');
-const pK = document.getElementById('pK');
-const pL = document.getElementById('pL');
-const pM = document.getElementById('pM');
-const pN = document.getElementById('pN');
-const pO = document.getElementById('pO');
-const pP = document.getElementById('pP');
-const pQ = document.getElementById('pQ');
 
-const para1 = document.getElementById('para1');
-const para2 = document.getElementById('para2');
-const para3 = document.getElementById('para3');
-const para4 = document.getElementById('para4');
-const para5 = document.getElementById('para5');
-const para6 = document.getElementById('para6');
-
-const p1 = document.getElementById('p1')
-const p2 = document.getElementById('p2')
-const p3 = document.getElementById('p3')
-const p4 = document.getElementById('p4')
-const p5 = document.getElementById('p5')
-const p6 = document.getElementById('p6')
-const p7 = document.getElementById('p7')
-const p8 = document.getElementById('p8')
-const p9 = document.getElementById('p9')
-const p10 = document.getElementById('p10')
-const p11 = document.getElementById('p11')
-
-
-
-
-
-
-
-
+//button events
 meetApricot.addEventListener('click', () => {
     Apricot.listInfo();
 })
@@ -271,239 +252,6 @@ nextThree.addEventListener('click', () => {
 })
 
 //After this, we start branching into different options and pathways. Mess starts here.
-//user selects nothingOne after nextThree
-nothingOne.addEventListener('click', () => {
-    p1.innerHTML = "Apricot comes a little closer and-"
-    p2.innerHTML = Ink.listHealth();
-
-    setTimeout(() => {
-        Apricot.attack(Ink);
-        p3.innerHTML = Ink.listHealth();
-        showButton(help01, 'hidden'); //continue this as well :)
-        showButton(attack01, 'hidden');
-    }, 3000);
-})
-
-//user chooses help01 after nothingOne
-help01.addEventListener('click', () => {
-    p4.innerHTML = Apricot.listHealth();
-
-    setTimeout(() => {
-        Ink.help(Apricot);
-        p5.innerHTML = Apricot.listHealth();
-        p6.innerHTML = "Apricot's eyes start to turn a dark shade of red. They almost looks like blood."
-        showButton(help02, 'hidden');
-        showButton(attack02, 'hidden');
-    }, 3000);
-})
-
-//attack02 is selected after help01
-attack02.addEventListener('click', () => {
-    p7.innerHTML = "Ink doesn't like being attacked by what are supposed to be docile animals. So she gives in to her primal instinct."
-    p8.innerHTML = Apricot.listHealth();
-
-    setTimeout(() => {
-        Ink.attack(Apricot);
-        p9.innerHTML = Apricot.listHealth();
-        showButton(next02, 'hidden');
-    }, 3000);
-})
-
-next02.addEventListener('click', () => {
-    p10.innerHTML = "Ink watches sadly as the lamb slowly dies. As the light in it's eyes is fading, Apricot mutters a single word."
-
-    setTimeout(() => {
-        p11.innerHTML = "Sugar.";
-    }, 5000);
-
-    setTimeout(() => {
-        showButton(nextLevel02, 'hidden');
-    }, 8000);
-})
-
-
-
-
-
-
-//user chooses attack01 after nothingOne
-attack01.addEventListener('click', () => {
-    p4.innerHTML = "Ink doesn't like being attacked by what are supposed to be docile animals. So she gives in to her primal instinct."
-    p5.innerHTML = Apricot.listHealth();
-
-    setTimeout(() => {
-        Ink.attack(Apricot);
-        p6.innerHTML = Apricot.listHealth();
-        showButton(next01, 'hidden');
-    }, 3000);
-})
-
-next01.addEventListener('click', () => {
-    p7.innerHTML = "Ink watches sadly as the lamb slowly dies. As the light in it's eyes is fading, Apricot mutters a single word."
-
-    setTimeout(() => {
-        p8.innerHTML = "Sugar.";
-    }, 5000);
-
-    setTimeout(() => {
-        showButton(nextLevel01, 'hidden');
-    }, 8000);
-})
-
-
-
-
-
-
-
-
-
-
-
-
-
-//user selects help01 after nextThree
 helpOne.addEventListener('click', () => {
-    pA.innerHTML = Apricot.listHealth();
-
-    setTimeout(() => {
-        Ink.help(Apricot);
-        pB.innerHTML = Apricot.listHealth();
-        pC.innerHTML = "Apricot's eyes start to turn a dark shade of red. They almost looks like blood."
-        showButton(helpTwo, 'hidden');
-    }, 3000);
+    
 })
-
-helpTwo.addEventListener('click', () => {
-    pD.innerHTML = Apricot.listHealth();
-
-    setTimeout(() => {
-        Ink.help(Apricot);
-        pE.innerHTML = Apricot.listHealth();
-        pF.innerHTML = "The lamb starts to shake violently."
-    }, 3000);
-
-    setTimeout(() => {
-        pG.innerHTML = Ink.listHealth();
-    }, 8000);
-
-    setTimeout(() => {
-        Apricot.attack(Ink);
-        pH.innerHTML = Ink.listHealth();
-        pI.innerHTML = "Apricot seems to be a little stronger than Sugar was."
-        showButton(nextFour, 'hidden');
-    }, 12000);
-})
-
-nextFour.addEventListener('click', () => {
-    pJ.innerHTML = "Ink, confused and hurt, says, “Why are you attacking me? I am trying to help you.”"
-    showButton(nextFive, 'hidden');
-})
-
-nextFive.addEventListener('click', () => {
-    pK.innerHTML = Ink.listHealth();
-
-    setTimeout(() => {
-        Apricot.attack(Ink);
-        pL.innerHTML = Ink.listHealth();
-        showButton(attackOne, 'hidden');
-        showButton(helpThree, 'hidden');
-    }, 2000);
-})
-
-//user selected "help" after nextFive button
-helpThree.addEventListener('click', () => {
-    pM.innerHTML = Apricot.listHealth();
-
-    setTimeout(() => {
-        Ink.help(Apricot);
-        pN.innerHTML = Apricot.listHealth();
-    }, 3000);
-
-    setTimeout(() => {
-        pO.innerHTML = "Apricot doesn't look like she wants to attack Ink, but she does so anyway."
-    }, 5000);
-
-    setTimeout(() => {
-        pP.innerHTML = Ink.listHealth();
-        setTimeout(() => {
-            Apricot.attack(Ink);
-            pQ.innerHTML = Ink.listHealth();
-        }, 3000);
-    }, 8000);
-
-    setTimeout(() => {
-        showButton(helpFour, 'hidden');
-        showButton(attackTwo, 'hidden');
-    }, 12000);
-})
-
-//user selects attackTwo after helpThree (damnnnnn)
-attackTwo.addEventListener('click', () => {
-    para1.innerHTML = "Ink doesn't like being attacked by what are supposed to be docile animals. So she gives in to her primal instinct."
-    para2.innerHTML = Apricot.listHealth();
-
-    setTimeout(() => {
-        Ink.attack(Apricot);
-        para3.innerHTML = Apricot.listHealth();
-        showButton(nextSeven, 'hidden');
-    }, 3000);
-})
-
-nextSeven.addEventListener('click', () => {
-    para5.innerHTML = "Ink watches sadly as the lamb slowly dies. As the light in it's eyes is fading, Apricot mutters a single word."
-
-    setTimeout(() => {
-        para6.innerHTML = "Sugar.";
-    }, 5000);
-
-    setTimeout(() => {
-        showButton(nextLevelTwo, 'hidden');
-    }, 8000);
-})
-
-
-//user selected helpFour after helpThree
-helpFour.addEventListener('click', () => {
-    para1.innerHTML = "The only thing Ink wanted was to help."
-    para2.innerHTML = Ink.listHealth();
-
-    setTimeout(() => {
-        Apricot.attack(Ink);
-        para3.innerHTML = Ink.listHealth();
-    }, 3000);
-
-    setTimeout(() => {
-        para4.innerHTML = "But alas, the wolf was too forgiving."
-        showButton(tryAgain, 'hidden');
-    }, 6000);
-})
-
-tryAgain.addEventListener('click', () => {
-    window.location.reload();
-})
-
-//user selected "attack" after nextFive button
-attackOne.addEventListener('click', () => {
-    pM.innerHTML = "Ink doesn't like being attacked by what are supposed to be docile animals. So she gives in to her primal instinct."
-    pN.innerHTML = Apricot.listHealth();
-
-    setTimeout(() => {
-        Ink.attack(Apricot);
-        pO.innerHTML = Apricot.listHealth();
-        showButton(nextSix, 'hidden');
-    }, 3000);
-})
-
-nextSix.addEventListener('click', () => {
-    pP.innerHTML = "Ink watches sadly as the lamb slowly dies. As the light in it's eyes is fading, Apricot mutters a single word."
-
-    setTimeout(() => {
-        pQ.innerHTML = "Sugar.";
-    }, 5000);
-
-    setTimeout(() => {
-        showButton(nextLevelOne, 'hidden');
-    }, 8000);
-})
-
