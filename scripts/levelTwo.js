@@ -31,7 +31,6 @@ class Character {
     }
 }
 
-
 class Wolf extends Character {
     constructor(name, selfEsteem, health, healthDamage, esteemDamage) {
         super(name, selfEsteem, health, healthDamage = 50, esteemDamage = 10);
@@ -52,7 +51,6 @@ class Wolf extends Character {
     }
 }
 
-
 class Sheep extends Character {
     constructor(name, selfEsteem, health, healthDamage, esteemDamage) {
         super(name, selfEsteem, health, healthDamage = 10, esteemDamage = 20);
@@ -62,7 +60,6 @@ class Sheep extends Character {
         return `"Look who it is!" said ${this.name}. "It's ${otherCharacter.name}! Oh boy, I'm so scared right now, are you going to eat me? HAHAHA!! I'd like to see you try."`
     }
 }
-
 
 class undeadLamb extends Sheep{
     constructor(name, health, healthDamage) {
@@ -159,9 +156,6 @@ function afterAttack (newDiv, nextLevel) {
 //THESE FUNCTIONS ARE SACRED, DO NOT TOUCH!!!! ^
 
 
-
-
-
 //grabbing HTML elements
 const meetApricot = document.getElementById('meetApricot');
 const startButt = document.getElementById('startButt');
@@ -176,22 +170,19 @@ const next1 = document.getElementById('next1');
 const next2 = document.getElementById('next2');
 const next3 = document.getElementById('next3');
 
-
 //help
 const helpOne = document.getElementById('helpOne');
+const helpTwo = document.getElementById('helpTwo');
 const helpThree = document.getElementById('helpThree')
 const helpFour = document.getElementById('helpFour')
 
 const help1 = document.getElementById('help1');
 const help2 = document.getElementById('help2');
 
-
-
 //nothing
 const nothingOne = document.getElementById('nothingOne');
 const nothing1 = document.getElementById('nothing1');
 const nothing2 = document.getElementById('nothing2');
-
 
 //attack
 const attackOne = document.getElementById('attackOne')
@@ -219,7 +210,6 @@ const attackDiv3 = document.getElementById('attackDiv3')
 const nextAfterAttack3 = document.getElementById('nextAfterAttack3')
 const afterAttack3 = document.getElementById('afterAttack3')
 
-
 //next level
 const nextLevel01 = document.getElementById('nextLevel01');
 const nextLevel02 = document.getElementById('nextLevel02');
@@ -229,17 +219,17 @@ const nextLevel05 = document.getElementById('nextLevel05');
 const nextLevel06 = document.getElementById('nextLevel06');
 const nextLevel07 = document.getElementById('nextLevel07');
 
-
 //speak
 const userInput = document.getElementById('userInput');
 const userInputTwo = document.getElementById('userInputTwo');
-
+//
 const userSpeak = document.getElementById('userSpeak');
 const userSpeak2 = document.getElementById('userSpeak2');
-
+const userSpeakTwo = document.getElementById('userSpeakTwo');
+//
 //the other one of these was just named "next" or something
 const speak2 = document.getElementById('speak2');
-
+const speakTwo = document.getElementById('speakTwo');
 
 //try again
 const tryAgain = document.getElementById('tryAgain');
@@ -286,6 +276,7 @@ const line4 = document.getElementById('line4');
 const line5 = document.getElementById('line5');
 const line6 = document.getElementById('line6');
 const line7 = document.getElementById('line7');
+const line705 = document.getElementById('line705');
 const line8 = document.getElementById('line8');
 const line9 = document.getElementById('line9');
 const line10 = document.getElementById('line10');
@@ -305,12 +296,6 @@ const line23 = document.getElementById('line23');
 const line24 = document.getElementById('line24');
 const line25 = document.getElementById('line25');
 const line26 = document.getElementById('line26');
-
-
-
-
-
-
 
 
 //button events
@@ -371,6 +356,272 @@ nextThree.addEventListener('click', () => {
 })
 
 //After this, we start branching into different options and pathways. Mess starts here.
-helpOne.addEventListener('click', () => {
 
+//user chooses helpOne
+helpOne.addEventListener('click', () => {
+    lineOne.innerHTML = Apricot.listHealth();
+
+    setTimeout(() => {
+        Ink.help(Apricot);
+        lineTwo.innerHTML = Apricot.listHealth();
+    }, 3000);
+
+    setTimeout(() => {
+        lineThree.innerHTML = "Apricot's eyes start to turn a dark shade of red. They almost look like drops of blood."
+        showButton(helpTwo, 'hidden');
+    }, 5000);
+})
+
+helpTwo.addEventListener('click', () => {
+    lineFour.innerHTML = Apricot.listHealth();
+
+    setTimeout(() => {
+        Ink.help(Apricot);
+        lineFive.innerHTML = Apricot.listHealth();
+    }, 3000);
+
+    setTimeout(() => {
+        lineSix.innerHTML = "The lamb starts to shake violently."
+        lineSeven.innerHTML = Ink.listHealth();
+    }, 6000);
+
+    setTimeout(() => {
+        Apricot.attack(Ink);
+        lineEight.innerHTML = Ink.listHealth();
+        lineNine.innerHTML = "Apricot seems to be a little stronger than Sugar was."
+    }, 8000);
+
+    setTimeout(() => {
+        showButton(userInputTwo, 'hidden')
+        showButton(speakTwo, 'hidden')
+    }, 11000);
+})
+
+speakTwo.addEventListener('click', () => {
+    userSpeakTwo.innerHTML = `Confused and hurt, Ink says, "${userInputTwo.value}"`
+    lineTen.innerHTML = Ink.listHealth();
+
+    setTimeout(() => {
+        Apricot.attack(Ink);
+        lineEleven.innerHTML = Ink.listHealth();
+        showButton(helpThree, 'hidden');
+        showButton(attackOne, 'hidden');
+    }, 3000);
+})
+
+//attackOne route:
+attackOne.addEventListener('click', () => {
+    attackRoute(attackDivOne, nextAfterAttack1);
+})
+
+nextAfterAttack1.addEventListener('click', () => {
+    afterAttack(afterAttackOne, nextLevel01);
+})
+
+//helpThree route:
+helpThree.addEventListener('click', () => {
+    lineElevenHalf.innerHTML = Apricot.listHealth();
+
+    setTimeout(() => {
+        Ink.help(Apricot);
+        lineTwelve.innerHTML = Apricot.listHealth();
+        showButton(nextFour, 'hidden');
+    }, 3000);
+})
+
+nextFour.addEventListener('click', () => {
+    lineThirteen.innerHTML = "Apricot doesn't look like she wants to attack, but she does so anyway."
+    lineFourteen.innerHTML = Ink.listHealth();
+
+    setTimeout(() => {
+        Apricot.attack(Ink);
+        lineFifteen.innerHTML = Ink.listHealth();
+        showButton(helpFour, 'hidden');
+        showButton(attackTwo, 'hidden');
+    }, 3000);
+})
+
+//attackTwo route:
+attackTwo.addEventListener('click', () => {
+    attackRoute(attackDivTwo, nextAfterAttackTwo);
+})
+
+nextAfterAttackTwo.addEventListener('click', () => {
+    afterAttack(afterAttackTwo, nextLevel02);
+})
+
+//helpFour route:
+helpFour.addEventListener('click', () => {
+    lineSixteen.innerHTML = "The only thing Ink wanted to do was help."
+    lineSeventeen.innerHTML = Ink.listHealth();
+
+    setTimeout(() => {
+        Apricot.attack(Ink);
+        lineEighteen.innerHTML = Ink.listHealth();
+    }, 3000);
+
+    setTimeout(() => {
+        lineNineteen.innerHTML = "But alas, the wolf was too forgiving."
+        showButton(tryAgain, 'hidden')
+    }, 5000);
+})
+
+tryAgain.addEventListener('click', () => {
+    window.location.reload();
+})
+//END OF ROUTE helpOne!
+
+
+//user chooses nothingOne
+nothingOne.addEventListener('click', () => {
+    line1.innerHTML = "Apricot comes a little closer and-"
+    line2.innerHTML = Ink.listHealth();
+
+    setTimeout(() => {
+        Apricot.attack(Ink);
+        line3.innerHTML = Ink.listHealth();
+        showButton(help1, 'hidden');
+        showButton(attack1, 'hidden');
+    }, 3000);   
+})
+
+//user chooses attack1:
+attack1.addEventListener('click', () => {
+    attackRoute(attackDiv1, nextAfterAttack1);
+})
+
+nextAfterAttack1.addEventListener('click', () => {
+    afterAttack(afterAttack1, nextLevel03);
+})
+
+//user chooses help1:
+help1.addEventListener('click', () => {
+    line4.innerHTML = Apricot.listHealth();
+
+    setTimeout(() => {
+        Ink.help(Apricot);
+        line5.innerHTML = Apricot.listHealth();
+        showButton(next1, 'hidden');
+    }, 3000);
+})
+
+next1.addEventListener('click', () => {
+    line6.innerHTML = Apricot.listHealth();
+
+    setTimeout(() => {
+        Apricot.dying();
+        line7.innerHTML = Apricot.listHealth();
+    }, 3000);
+
+    setTimeout(() => {
+        line705.innerHTML = "Apricot doesn't look like she wants to attack, but she does so anyway."
+        line8.innerHTML = Ink.listHealth();
+    }, 6000);
+
+    setTimeout(() => {
+        Apricot.attack(Ink);
+        line9.innerHTML = Ink.listHealth();
+        showButton(help2, 'hidden');
+        showButton(nothing1, 'hidden');
+        showButton(attack2, 'hidden');
+    }, 9000);
+})
+
+//user chooses attack2:
+attack2.addEventListener('click', () => {
+    attackRoute(attackDiv2, nextAfterAttack2);
+})
+
+nextAfterAttack2.addEventListener('click', () => {
+    afterAttack(afterAttack2, nextLevel04);
+});
+
+//user chooses nothing1:
+nothing1.addEventListener('click', () => {
+    line10.innerHTML= "Apricot, trembling and clearly exhausted, attacks Ink for the final time."
+    line11.innerHTML = Ink.listHealth();
+
+    setTimeout(() => {
+        Apricot.attack(Ink);
+        line12.innerHTML = Ink.listHealth();
+        showButton(next2, 'hidden');
+    }, 3000);
+})
+
+next2.addEventListener('click', () => {
+    line13.innerHTML = Apricot.listHealth();
+
+    setTimeout(() => {
+        Apricot.dying();
+        line14.innerHTML = Apricot.listHealth();
+    }, 3000);
+
+    setTimeout(() => {
+        line15.innerHTML = "Ink watches sadly as the lamb slowly dies. As the light in her eyes fades away, Apricot mutters a single word."
+    }, 6000);
+
+    setTimeout(() => {
+        line16.innerHTML = "Sugar."
+    }, 9000);
+
+    setTimeout(() => {
+        showButton(nextLevel05, 'hidden');
+    }, 11000);
+})
+
+//user chooses help2
+help2.addEventListener('click', () => {
+    line17.innerHTML = Apricot.listHealth();
+
+    setTimeout(() => {
+        Ink.help(Apricot);
+        line18.innerHTML = Apricot.listHealth();
+    }, 3000);
+
+    setTimeout(() => {
+        line19.innerHTML = "Apricot starts to shake violently."
+        line20.innerHTML = Ink.listHealth();
+    }, 6000);
+
+    setTimeout(() => {
+        Apricot.attack(Ink);
+        line21.innerHTML = Ink.listHealth();
+        showButton(nothing2, 'hidden');
+        showButton(attack3, 'hidden');
+    }, 9000);
+})
+
+//user chooses attack3:
+attack3.addEventListener('click', () => {
+    attackRoute(attackDiv3, nextAfterAttack3)
+})
+
+nextAfterAttack3.addEventListener('click', () => {
+    afterAttack(afterAttack3, nextLevel06);
+})
+
+//user chooses nothing2:
+nothing2.addEventListener('click', () => {
+    line22.innerHTML = "Apricot, trembling and clearly exhausted, collapses on the forest floor."
+    line23.innerHTML = Apricot.listHealth();
+
+    setTimeout(() => {
+        Apricot.dying();
+        line24.innerHTML = Apricot.listHealth();
+        showButton(next3, 'hidden');
+    }, 5000);
+})
+
+next3.addEventListener('click', () => {
+    setTimeout(() => {
+        line25.innerHTML = "Ink watches sadly as the lamb slowly dies. As the light in her eyes fades away, Apricot mutters a single word."
+    }, 6000);
+
+    setTimeout(() => {
+        line26.innerHTML = "Sugar."
+    }, 9000);
+
+    setTimeout(() => {
+        showButton(nextLevel07, 'hidden');
+    }, 11000);
 })
