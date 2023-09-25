@@ -143,7 +143,7 @@ const pFourteen = document.getElementById('pFourteen');
 const fallenFoe = document.getElementById('fallenFoe');
 const wantedFriend = document.getElementById('wantedFriend');
 
-
+const chooseMove = document.getElementById('chooseMove')
 
 
 //creating a function to show button
@@ -185,6 +185,7 @@ nextTwo.addEventListener('click', () => {
     //Self Esteem After (and show options)
     setTimeout(() => {
         inkEsteemAfter.innerHTML = Ink.listSelfEsteem();
+        chooseMove.innerHTML = "Choose your next move as Ink:"
         showButton(verbAttackOne, 'hidden');
         showButton(physAttackOne, 'hidden');
         // showButton(nothingOne, 'hidden'); //I'm tired, might work on later

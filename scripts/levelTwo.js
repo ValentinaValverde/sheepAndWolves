@@ -61,7 +61,7 @@ class Sheep extends Character {
 
 class undeadLamb extends Sheep{
     constructor(name, health, healthDamage) {
-        super(name); //undead lamb does slightly more damage.
+        super(name); //undead lamb does slightly more damage... for now
         this.health = health;
         this.healthDamage = healthDamage;
     }

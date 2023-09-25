@@ -69,6 +69,27 @@ button:hover {
   cursor: pointer;
 }
 
+
+.charButton{
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 5px;
+  font-family: 'Gloock', serif;
+  font-size: 1.1rem;
+  background-color: #6e8894;
+  color: #efd6ac;
+  text-decoration: none;
+}
+
+.normalButtons{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
 #meetSugar {
   background-color: #efd6ac;
   color: #c44900;
@@ -89,7 +110,7 @@ button:hover {
   justify-content: space-around;
   flex-wrap: wrap;
   /*-- below was necessary for me hehehe --*/
-  margin-bottom: 200px;
+  margin-bottom: 100px;
 }
 
 .levelLink{
@@ -101,13 +122,23 @@ button:hover {
   margin: 5px;
 }
 
-
-
 .space{
   margin: 75px;
 }
 
+.characterDiv{
+  margin-top: 50px;
+  font-size: 30px;
+  margin-bottom: 50px;
+}
 
+.characters{
+  text-decoration: none;
+  color:#6e8894;
+}
+
+
+/* not currently in use: */
 .footer{
   width: 100%;
   background-color: #efd6ac;
