@@ -82,6 +82,10 @@ button:hover {
   text-decoration: none;
 }
 
+.charButton:hover{
+  cursor: pointer;
+}
+
 .normalButtons{
   display: flex;
   flex-direction: row;

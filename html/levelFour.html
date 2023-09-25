@@ -1,40 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Level Four</title>
     <link rel="stylesheet" href="../styles/levelFour.css" />
     <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
+
 <body>
-        <!-- importing Google font: -->
-        <style>
-            @import url('https://fonts.googleapis.com/css2?family=Gloock&family=Reem+Kufi+Fun:wght@400;500;600;700&display=swap');
-        </style>
-    
-        <!-- icon to go to home page.-->
-        <a href="../html/main.html">
-            <span class="material-symbols-outlined logoIcon">
-                flare
-            </span>
-        </a>
-    
-        <h1>Level Four</h1>
-        <p><i>Instructions: </i>click the buttons as they appear to play.</p>
-    
-        <div>
-            <button class="startButt" id="startButt" type="button">Start</button>
-        </div>
-    
-    
-    
-    
-    
-        <div class="emptySpace"></div>
+    <!-- importing Google font: -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gloock&family=Reem+Kufi+Fun:wght@400;500;600;700&display=swap');
+    </style>
+
+    <!-- icon to go to home page.-->
+    <a href="../html/main.html">
+        <span class="material-symbols-outlined logoIcon">
+            flare
+        </span>
+    </a>
+
+    <h1>Level Four</h1>
+    <p><i>Instructions: </i>click the buttons as they appear to play.</p>
+
+    <div>
+        <button class="startButt" id="startButt" type="button">Start</button>
+    </div>
+
+
+    <!-- beginning: -->
+    <p id="p1"></p> <!-- filler text, Ebony and Ink wander upon the pasture that Ink first encountered Sugar. -->
+    <p id="p2"></p> <!-- Sugar sees Ink, taunts -->
+    <p id="p3"></p> <!-- The herd pulls up. -->
+    <button class="button hidden" id="nothing1" type="button">Nothing</button>
+    <button class="button hidden" id="attack1" type="button">Next</button>
+
+    <!-- user chooses nothing1: -->
+    <p id="p4"></p> <!-- Sugar esteem attack -->
+    <p id="p5"></p> <!-- list Ink esteem, alert -->
+    <p id="p6"></p> <!-- list Ink esteem -->
+    <p id="p7"></p> <!-- It seems as though Ink is less vulnerable when she has a friend. -->
+    <button class="button hidden" id="next1" type="button">Next</button>
+    <!-- goes to: -->
+
+    <!-- user chooses attack1 -->
+    <p id="p07"></p> <!-- Ink attacks Sugar -->
+    <p id="p8"></p> <!-- list Sugar health, alert -->
+    <p id="p9"></p> <!-- list Sugar health -->
+    <button class="button hidden" id="next2" type="button">Next</button>
+
+    <p id="p10"></p> <!-- Herd defends Sugar (randomize character) -->
+    <p id="p101"></p> <!-- randomize character -->
+    <button class="button hidden" id="help1" type="button">Help</button>
+    <button class="button hidden" id="attack2" type="button">Attack</button>
+
+    <!-- user chooses help1: -->
+    <p id="p11"></p> <!-- Ink decides to be kind -->
+    <p id="p12"></p> <!-- list character health, alert -->
+    <p id="p13"></p> <!-- list character health -->
+    <p id="p14"></p> <!-- Dialogue about sheep being fully healed and running away. -->
+    <button class="button hidden" id="next3" type="button">Next</button>
+
+    <p id="p15"></p> <!-- Herd member appears, attacks Ink -->
+    <p id="p16"></p> <!-- list Ink health, alert -->
+    <p id="p17"></p> <!-- list Ink health -->
+    <button class="button hidden" id="help2" type="button">Help</button>
+    <button class="button hidden" id="attack3" type="button">Attack</button>
+
+    <!-- user chooses help2: -->
+    <p id="p18"></p> <!-- Ink decides to be kind -->
+    <p id="p19"></p> <!-- list character health, alert -->
+    <p id="p20"></p> <!-- list character health -->
+    <p id="p21"></p> <!-- Dialogue about sheep being fully healed and running away. -->
+    <button class="button hidden" id="next4" type="button">Next</button>
+
+    <p id="p22"></p> <!-- last herd member appears, attacks Ink -->
+    <p id="p23"></p> <!-- list Ink health, alert -->
+    <p id="p24"></p> <!-- lsit Ink health -->
+    <button class="button hidden" id="help3" type="button">Help</button>
+    <button class="button hidden" id="attack4" type="button">Attack</button>
+
+    <!-- user chooses help3: -->
+    <p id="p25"></p> <!-- Ink decides to be kind -->
+    <p id="p26"></p> <!-- list character health, alert -->
+    <p id="p27"></p> <!-- list character health -->
+    <p id="p28"></p> <!-- Dialogue about sheep being fully healed and running away. -->
+    <button class="button hidden" id="next5" type="button">Next</button>
+
+    <p id="p29"></p> <!-- Sugar is mad and attacks -->
+    <p id="p30"></p> <!-- list Ink health, alert -->
+    <p id="p31"></p> <!-- list Ink health -->
+    <button class="button hidden" id="help4" type="button">Help</button>
+    <button class="button hidden" id="attack5" type="button">Attack</button>
+
+    <!-- user chooses help4: -->
+    <p id="p32"></p> <!-- Sugar laughs because he simply cannot be helped. -->
+    <button class="button hidden" id="attack6" type="button">Attack</button>
+
+    <p id="p33"></p> <!-- Ebony kills Sugar -->
+    <p id="p34"></p> <!-- End story. -->
+
+
+    <p id="p35"></p> <!--  -->
+    <p id="p36"></p> <!--  -->
+    <p id="p37"></p> <!--  -->
+    <p id="p38"></p> <!--  -->
+    <p id="p39"></p> <!--  -->
+    <p id="p40"></p> <!--  -->
+
+
+
+
+
+
+    <div class="emptySpace"></div>
 
 
     <script src="../scripts/levelFour.js"></script>
 </body>
+
 </html>
