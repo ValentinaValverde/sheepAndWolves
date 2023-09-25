@@ -297,9 +297,9 @@ const line26 = document.getElementById('line26');
 
 
 //button events
-meetApricot.addEventListener('click', () => {
-    Apricot.listInfo();
-})
+// meetApricot.addEventListener('click', () => {
+//     Apricot.listInfo();
+// })
 
 startButt.addEventListener('click', () => {
     pOne.innerHTML = "Ink wanders into the woods, blood matted on her coat, and rests under a tree."

@@ -36,8 +36,6 @@ class Wolf extends Character {
         otherCharacter.health = (otherCharacter.health = 100)
         return (otherCharacter.health);
     }
-
-
 }
 
 class Sheep extends Character {
@@ -45,9 +43,9 @@ class Sheep extends Character {
         super(name, selfEsteem, health = 100, healthDamage = 15, esteemDamage = 0);
     }
 
-    taunt(otherCharacter) {
-        return `Hello again, ${otherCharacter.name}. Oh, I see you have a friend. Do you want to meet mine?`
-    }
+    // taunt(otherCharacter) {
+    //     return `Hello again, ${otherCharacter.name}. Oh, I see you have a friend. Do you want to meet mine?`
+    // }
 
     esteemAttack(otherCharacter){
         alert(`${this.name} verbally attacked ${otherCharacter.name}! ${otherCharacter.name} still has ${otherCharacter.selfEsteem} self esteem.`)
@@ -88,11 +86,18 @@ function showButton(button, classHidden){
 
 function randomizeCharacter(){
     const randomize = herdArray[Math.floor(Math.random() * herdArray.length)];
-    return (randomize.name);
+    return (randomize);
 }
 
 function removeFromArray(characterToRemove){
-    herdArray = herdArray.filter(characterToRemove);
+    console.log("CHARACTER TO REMOVE:", characterToRemove);
+
+    herdArray = herdArray.filter((character) => {
+        if(character.name !== characterToRemove.name){
+            return character;
+        }
+        console.log(character);
+    });
     return (herdArray);
 }
 
@@ -101,11 +106,11 @@ function removeFromArray(characterToRemove){
 //THESE FUNCTIONS ARE SACRED, DO NOT TOUCH!!!! ^
 
 
-console.log(herdArray);
+console.log("HERD ARRAY:", herdArray);
 
-console.log(removeFromArray(Vanilla));
+console.log("randomized character:", removeFromArray(randomizeCharacter()));
 
-console.log(randomizeCharacter());
+// console.log(randomizeCharacter());
 
 
 //grabbing HTML elements:
@@ -177,7 +182,7 @@ startButt.addEventListener('click', () => {
 
     setTimeout(() => {
         p2.innerHTML = "There is a shadow, it is Sugar, and Sugar taunts."
-        p3.innerHTML = Sugar.taunt();
+        // p3.innerHTML = Sugar.taunt();
     }, 3000);
 
     setTimeout(() => {
@@ -228,16 +233,25 @@ next2.addEventListener('click', () => {
 //user chooses help1:
 help1.addEventListener('click', () => {
     p11.innerHTML = "Ink decides to be kind."
-    p12.innerHTML =     //list the health of the randomized character here
+    const value = randomizeCharacter();
+
+    p12.innerHTML = value.health  //list the health of the randomized character here
 
     setTimeout(() => {
         Ink.help()    //list the name of the randomized character here
-        p13.innerHTML =  ""   //list the health of the randomized character here
+        p13.innerHTML =  " "   //list the health of the randomized character here
     }, 3000);
 
     setTimeout(() => {
-        p14.innerHTML = "Sheep is fully healed and runs away (happily)"
+        p14.innerHTML = " "  //call the speak method for the randmoized character
         removeFromArray();     //remove the name of the randmized character
         showButton(next3, 'hidden');
     }, 6000);
 })
+
+
+
+
+// const value = randomizeCharacter();
+// console.log(value.health);
+

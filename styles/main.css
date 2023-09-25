@@ -76,10 +76,12 @@ button:hover {
   padding: 10px;
   margin: 5px;
   font-family: 'Gloock', serif;
-  font-size: 1.1rem;
+  font-size: 30px;
   background-color: #6e8894;
   color: #efd6ac;
   text-decoration: none;
+  width: 150px;
+
 }
 
 .charButton:hover{
@@ -111,10 +113,9 @@ button:hover {
 .levelSection{
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
   /*-- below was necessary for me hehehe --*/
-  margin-bottom: 100px;
 }
 
 .levelLink{
@@ -123,7 +124,9 @@ button:hover {
   background-color: #6e8894;
   padding: 30px;
   border-radius: 10px;
-  margin: 5px;
+  font-size: 30px;
+  margin: 10px;
+  width: 250px;
 }
 
 .space{
